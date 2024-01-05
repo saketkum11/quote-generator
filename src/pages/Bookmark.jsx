@@ -1,5 +1,5 @@
 import "../style/Home.css";
-import "../style/Bookmark.css";
+import "../style/bookmark.css";
 import { Link } from "react-router-dom";
 import { Card } from "../server";
 import { useSelector } from "react-redux";
