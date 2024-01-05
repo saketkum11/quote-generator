@@ -1,0 +1,10 @@
+.home-page-dropdown {
+  width: 253px;
+  height: 38px;
+  border-radius: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  margin-top: 6rem;
+}

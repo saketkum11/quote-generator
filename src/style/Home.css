@@ -6,6 +6,7 @@
   );
   height: 100vh;
   font-size: larger;
+  margin: 0 auto;
 }
 .home-page-header-container {
 }

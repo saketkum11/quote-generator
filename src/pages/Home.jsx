@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../style/Home.css";
 import { Card } from "../server";
+import { DropDown } from "../component/DropDown";
 const Home = () => {
   return (
     <div className="home-page">
@@ -25,6 +26,9 @@ const Home = () => {
       <main>
         <section>
           <Card />
+        </section>
+        <section>
+          <DropDown />
         </section>
       </main>
     </div>
