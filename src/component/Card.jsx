@@ -1,12 +1,22 @@
+/* eslint-disable react/prop-types */
+import { useDispatch } from "react-redux";
 import "../style/Card.css";
-const Card = () => {
+import "../style/Home.css";
+import { addToBookmark } from "../slice/quoteSlice";
+const Card = ({ randomQuote }) => {
+  const { author, content } = randomQuote;
+  const dispatch = useDispatch();
+  const handleBookmark = (quote) => {
+    dispatch(addToBookmark(quote));
+  };
   return (
-    <div className="card-content">
-      <p className="card-paragh">
-        The human spirit must prevail over technology
-      </p>
-      <p className="card-author">-Albert Einstein</p>
-      <button className="card-bookmark-button">
+    <div className="card-content home-page-card">
+      <p className="card-paragh">{content}</p>
+      <p className="card-author">-{author}</p>
+      <button
+        className="card-bookmark-button"
+        onClick={() => handleBookmark(randomQuote)}
+      >
         <svg
           width="18"
           height="18"

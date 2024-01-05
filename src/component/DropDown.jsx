@@ -1,11 +1,26 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import "../style/DropDown.css";
-const DropDown = () => {
+import { useDispatch } from "react-redux";
+import { randomQuote } from "../slice/quoteSlice";
+const DropDown = ({ tags }) => {
+  const dispatch = useDispatch();
+  const handleTags = (e) => {
+    const tagValue = e.target.value;
+    dispatch(randomQuote(tagValue));
+  };
   return (
-    <select className="home-page-dropdown">
-      <option value="">hello</option>
-      <option value="">New</option>
-      <option value="">user</option>
+    <select className="home-page-dropdown" onChange={(e) => handleTags(e)}>
+      <option>Please choose one option</option>
+      {tags.map((tag) => {
+        return (
+          <>
+            <option value={tag.name} key={tag._id}>
+              {tag.name}
+            </option>
+            ;
+          </>
+        );
+      })}
     </select>
   );
 };

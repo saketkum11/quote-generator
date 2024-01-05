@@ -2,7 +2,23 @@ import { Link } from "react-router-dom";
 import "../style/Home.css";
 import { Card } from "../server";
 import { DropDown } from "../component/DropDown";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getTags, randomQuote } from "../slice/quoteSlice";
 const Home = () => {
+  const {
+    quote: { randomQuotes, tags },
+  } = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(randomQuote());
+    dispatch(getTags());
+  }, [dispatch]);
+  const handleClick = () => {
+    dispatch(randomQuote());
+  };
+
   return (
     <div className="home-page">
       <header>
@@ -25,10 +41,18 @@ const Home = () => {
       </header>
       <main>
         <section>
-          <Card />
+          <Card randomQuote={randomQuotes} />
         </section>
         <section>
-          <DropDown />
+          <DropDown tags={tags} />
+        </section>
+        <section className="home-page-button-section">
+          <button
+            className="home-page-next-button"
+            onClick={() => handleClick()}
+          >
+            Next Quote
+          </button>
         </section>
       </main>
     </div>
