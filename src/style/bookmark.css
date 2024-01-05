@@ -1,0 +1,10 @@
+.bookmark-page {
+  background-image: linear-gradient(
+    256deg,
+    rgba(94, 42, 178, 1),
+    rgba(22, 30, 108, 1)
+  );
+  height: 100vh;
+  font-size: larger;
+  margin: 0 auto;
+}

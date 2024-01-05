@@ -4,16 +4,12 @@
     rgba(94, 42, 178, 1),
     rgba(22, 30, 108, 1)
   );
-  height: 100vh;
+
   font-size: larger;
   margin: 0 auto;
 }
-.home-page-header-container {
-}
-.home-page-nav {
-}
 .home-page-navigate {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin: 0 auto;
   padding: 1rem;
   width: 80%;
@@ -28,4 +24,32 @@
 }
 .home-page-text-bold {
   font-weight: 700;
+}
+.home-page-button-section {
+  display: flex;
+  justify-content: center;
+}
+.home-page-next-button {
+  border-radius: 1.875rem;
+  padding-inline: 3rem;
+  padding-block: 0.3rem;
+  background-color: rgba(0, 156, 81, 1);
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  cursor: pointer;
+}
+.active {
+  color: white;
+}
+@media only screen and (max-width: 640px) {
+  .home-page {
+    height: 100vh;
+  }
+  .home-page-text {
+    font-size: 1rem;
+  }
 }

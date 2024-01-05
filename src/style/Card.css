@@ -14,12 +14,15 @@
   font-weight: 400;
   padding-top: 1.4rem;
   padding-inline: 7.87rem;
+  color: #fff;
 }
 .card-author {
   display: flex;
   justify-content: center;
   margin-top: 6rem;
   padding-bottom: 1.7rem;
+  font-weight: 700;
+  font-size: 1rem;
 }
 .card-bookmark-button {
   position: absolute;
@@ -28,4 +31,21 @@
   cursor: pointer;
 
   border: none;
+}
+@media only screen and (max-width: 640px) {
+  .card-content {
+    margin-inline: 2rem;
+  }
+  .card-paragh {
+    font-size: 1rem;
+    padding-inline: 2rem;
+    text-align: center;
+  }
+  .card-author {
+    font-size: 0.5rem;
+  }
+  .card-bookmark-button {
+    bottom: 1rem;
+    right: 1rem;
+  }
 }
