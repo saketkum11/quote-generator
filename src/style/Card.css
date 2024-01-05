@@ -1,0 +1,31 @@
+.card-content {
+  max-width: 48rem;
+  position: relative;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(208, 82, 82, 1);
+  margin-inline: auto;
+  margin-top: 5.5rem;
+  border-radius: 2rem;
+}
+.card-paragh {
+  display: flex;
+  justify-content: center;
+  font-size: 1.875rem;
+  font-weight: 400;
+  padding-top: 1.4rem;
+  padding-inline: 7.87rem;
+}
+.card-author {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  padding-bottom: 1.7rem;
+}
+.card-bookmark-button {
+  position: absolute;
+  bottom: 1.75rem;
+  right: 8.5rem;
+  cursor: pointer;
+
+  border: none;
+}

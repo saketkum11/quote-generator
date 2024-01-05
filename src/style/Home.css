@@ -1,0 +1,30 @@
+.home-page {
+  background-image: linear-gradient(
+    256deg,
+    rgba(94, 42, 178, 1),
+    rgba(22, 30, 108, 1)
+  );
+  height: 100vh;
+  font-size: larger;
+}
+.home-page-header-container {
+}
+.home-page-nav {
+}
+.home-page-navigate {
+  margin-top: 0.5rem;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.home-page-text {
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 40px;
+}
+.home-page-text-bold {
+  font-weight: 700;
+}
